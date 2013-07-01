@@ -9,7 +9,7 @@ module Alchemy
     # associations
     has_many :languages
 
-    scope :published, where(public: true)
+    scope :published, -> { where(public: true) }
 
     # Returns true if this site is the current site
     def current?
